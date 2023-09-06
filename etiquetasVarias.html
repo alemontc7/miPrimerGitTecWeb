@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H's</title>
+    <style>
+        header {
+            background-color: #333;
+            color: white;
+        }
+        
+        span {
+            background-color: green;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Elementos de HTML</h1>
+        <p style="font-size: 2em; font-weight: bold;">Elementos de HTML</p>
+    </header>
+    <main>
+        <div>
+            <h2> Elemento H1</h2>
+            <p>Una pagina debe tener un h1 si o si y debe explicar el contenido de la pagina</p>
+            <h3> Mas pequeño</h3>
+            <h4> Parece una matrioshka</h4>
+            <h5> Parece una matrioshka mas pequeña</h5>
+            <h6> Matrioshka recursiva</h6>
+        </div>
+
+        <p>
+            River, decime qué se siente<br>
+            Haber jugado el nacional<br>
+            Te juro que, aunque pasen los años<br>
+            Nunca nos vamos a olvidar
+        </p>
+        <p>
+            Que te fuiste a la B
+            <br>Quemaste el <wbr> Monumental
+            <br>Esa mancha no se borra nunca más</p>
+        <p>
+            Che, gallina, sos cagón
+            <br>Le pegaste a un jugador
+            <br>Qué cobardes los Borrachos del Tablón
+        </p>
+        <hr>
+        <p> <strong> Oh, le, le! </strong><br>
+            Oh, la, la! <br>
+            <em> Ser del Barça es,</em> <br>
+            <mark> el millor que hi ha... </mark><br>
+            (Se Repite...)</p>
+
+        <h2>Lema 1 <sub>x</sub>:  complejidad de un DP topdown sin memo es de O ( <em> 2<sup>n</sup> ) !!</em></h2>
+        <q >El VAR ha validado el gol del madrid por que la mano de rudiger habilita a Jude</q>
+            
+        <p>Un <dfn> Azquenazi </dfn> es un judio</p>
+        <p> El naciente partido <abbr title="Union Libertadora Andinista">ULA </abbr> destruyó el MAS</p>
+        
+        <div>
+            <pre>
+                <code>
+                    #include <iostream>
+                        #include <vector>
+                        #include <map>
+                        using namespace std;
+                        
+                        signed main()
+                        {
+                            char c;
+                            int n, m, a, b;
+                            cin >> n >> m;
+                            string s;
+                            cin >> a >> b >> c;
+                            cin >> s;
+                            vector<pair<int, int>> movs = { {0,1}, {1,0}, {0,-1}, {-1,0} };
+                            int direction = 0;
+                        
+                            map<char, int> directionMap = { {'N', 0}, {'E', 1}, {'S', 2}, {'O', 3} };
+                            map<int, char> dirCharMap = { {0, 'N'}, {1, 'E'}, {2, 'S'}, {3, 'O'} };
+                            direction = directionMap[c];
+                            for (char i : s)
+                            { 
+                                if (i == 'D') direction = (direction + 1) % 4;
+                                if (i == 'I') direction = (direction + 3) % 4;
+                                else if (i == 'A')
+                                {
+                                    a += movs[direction].first; b += movs[direction].second;
+                                }
+                            }
+                            char dir = dirCharMap[direction];
+                            cout << a << " " << b << " " << dir << endl;
+                            return 0;
+                        }
+                        
+                </code>
+            </pre>
+            <pre> 
+
+                I--------------I   
+                I--------------I   
+               .-'            '-.  
+              / --.-.--,---,.--.,\ 
+             /--.-.--,---,.--.,-- \
+             |--------------------|
+             |       ANTI         |
+             |                    |
+             |  VERBAL-DIARRHOEA  |
+             |                    |
+             |     MEDICINE       |
+             |                    |
+             | [ Pharmacy Only ]  |
+             |____________________|
+             |.,--.-.--,---,.--.-.|   -cfbd-
+             |--.-.--,---,.--.,--.|
+             '--------------------'
+
+
+            </pre>
+            <q cite="https://www.w3schools.com/html/html_quotes.asp">
+                El elemento q <q> se utiliza para citar texto.
+            </q>
+            
+            <blockquote cite="https://www.w3schools.com/html/html_quotes.asp">
+              <p>El elemento blockquote </blockquote> <blockquote> se utiliza para citar texto.</p>
+            </blockquote>
+            <br>
+            <dfn>
+              La etiqueta dfn <dfn> se utiliza para definir términos.
+            </dfn>
+            <br>
+            <abbr title="Asociación de Software Libre">
+              A.S.L.
+            </abbr>
+            <br>
+            <small>
+              small: Este es un texto pequeño.
+            </small>
+            <br>
+            <ins>
+              inserted: Este texto se ha añadido.
+            </ins>
+            <br>
+            <del>
+              deleted: Este texto se ha eliminado.
+            </del>
+            <br>    
+            <s>
+              s: Este texto está tachado.
+            </s>
+    
+        </div>
+
+        
+    </main>
+
+    <footer>
+        &copy; 2023 Alejandro Montero
+    </footer>
+</body>
+</html>
